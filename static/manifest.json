@@ -1,0 +1,18 @@
+{
+  "short_name": "R&I Movies",
+  "name": "Rachel and Izac Movie List",
+  "icons": [
+    {
+      "src": "logo_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "background_color": "#66cc8a",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#66cc8a",
+  "description": "Weather forecast information"
+}
