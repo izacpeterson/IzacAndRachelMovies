@@ -20,49 +20,49 @@
 {#each data.movies as movie}
   {#if filter === "All"}
     <form method="POST" class="flex justify-evenly p-2">
-      <p>{movie.title}</p>
+      <p class="flex-1">{movie.title}</p>
       <input hidden type="text" bind:value={movie.uuid} name="movie" />
       <input hidden type="text" bind:value={movie.status} name="status" />
-      <button formaction="?/updateMovie">
+      <button formaction="?/updateMovie" class="p-2">
         {#if movie.status === "watched"}
           <Fa icon={faRotateLeft} class="text-error" />
         {:else}
           <Fa icon={faCheck} class="text-primary" />
         {/if}
       </button>
-      <button formaction="?/deleteMovie"
+      <button formaction="?/deleteMovie" class="p-2"
         ><Fa icon={faTrash} class="text-error" /></button
       >
     </form>
   {:else if filter === "Watched" && movie.status === "watched"}
     <form method="POST" class="flex justify-evenly p-2">
-      <p>{movie.title}</p>
+      <p class="flex-1">{movie.title}</p>
       <input hidden type="text" bind:value={movie.uuid} name="movie" />
       <input hidden type="text" bind:value={movie.status} name="status" />
-      <button formaction="?/updateMovie">
+      <button formaction="?/updateMovie" class="p-2">
         {#if movie.status === "watched"}
           <Fa icon={faRotateLeft} class="text-error" />
         {:else}
           <Fa icon={faCheck} class="text-primary" />
         {/if}
       </button>
-      <button formaction="?/deleteMovie"
+      <button formaction="?/deleteMovie" class="p-2"
         ><Fa icon={faTrash} class="text-error" /></button
       >
     </form>
   {:else if filter === "UnWatched" && movie.status === "new"}
     <form method="POST" class="flex justify-evenly p-2">
-      <p>{movie.title}</p>
+      <p class="flex-1">{movie.title}</p>
       <input hidden type="text" bind:value={movie.uuid} name="movie" />
       <input hidden type="text" bind:value={movie.status} name="status" />
-      <button formaction="?/updateMovie">
+      <button formaction="?/updateMovie" class="p-2">
         {#if movie.status === "watched"}
           <Fa icon={faRotateLeft} class="text-error" />
         {:else}
           <Fa icon={faCheck} class="text-primary" />
         {/if}
       </button>
-      <button formaction="?/deleteMovie"
+      <button formaction="?/deleteMovie" class="p-2"
         ><Fa icon={faTrash} class="text-error" /></button
       >
     </form>
